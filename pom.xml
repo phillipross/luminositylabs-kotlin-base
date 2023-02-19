@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Copyright (c) 2023 Luminosity Labs LLC. All rights reserved.
+
+ Licensed to the Apache Software Foundation (ASF) under one or more
+ contributor license agreements.  See the NOTICE file distributed with this
+ work for additional information regarding copyright ownership.  The ASF
+ licenses this file to you under the Apache License, Version 2.0
+ (the "License"); you may not use this file except in compliance with the
+ License.  You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ License for the specific language governing permissions and limitations
+ under the License.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>co.luminositylabs.oss</groupId>
+        <artifactId>luminositylabs-oss-parent</artifactId>
+        <version>0.3.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>luminositylabs-kotlin-base</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>luminositylabs-kotlin-base</name>
+    <description>Kotlin base project</description>
+    <url>https://github.com/luminositylabs/luminositylabs-kotlin-base</url>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Luminosity Labs Team</name>
+            <email>luminositylabs@gmail.com</email>
+            <organization>Luminosity Labs LLC</organization>
+            <organizationUrl>https://github.com/luminositylabs/</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <url>https://github.com/luminositylabs/luminositylabs-kotlin-base</url>
+        <connection>scm:git:https://github.com/luminositylabs/luminositylabs-kotlin-base.git</connection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <properties>
+        <!-- project default properties -->
+        <kotlin.version>1.8.10</kotlin.version>
+        <kotlin.code.style>official</kotlin.code.style>
+        <kotlin.compiler.incremental>true</kotlin.compiler.incremental>
+        <kotlin.compiler.jvmTarget>${java.min.version}</kotlin.compiler.jvmTarget>
+        <!-- testing/linting settings -->
+        <ktlint.skip>false</ktlint.skip>
+        <!-- plugin versioning -->
+        <ktlint-maven-plugin.version>1.16.0</ktlint-maven-plugin.version>
+        <!-- dependency versioning -->
+        <dependency.dokka.version>1.7.20</dependency.dokka.version>
+        <dependency.gson.version>2.9.0</dependency.gson.version>
+        <dependency.moshi.version>1.13.0</dependency.moshi.version>
+        <dependency.ktlint.version>0.48.0</dependency.ktlint.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.jetbrains.kotlin</groupId>
+                <artifactId>kotlin-test-testng</artifactId>
+                <version>${kotlin.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib</artifactId>
+            <version>${kotlin.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-test-testng</artifactId>
+            <version>${kotlin.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.github.gantsign.maven</groupId>
+                    <artifactId>ktlint-maven-plugin</artifactId>
+                    <version>${ktlint-maven-plugin.version}</version>
+                    <executions>
+                        <!-- Only use ktlint "check" goal (no formatting), and bind to "validate" phase rather than the
+                             default "verify" phase -->
+                        <execution>
+                            <id>validation-check</id>
+                            <!--<phase>verify</phase>-->
+                            <phase>validate</phase>
+                            <goals>
+                                <!--<goal>format</goal>-->
+                                <goal>check</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <sourceRoots>
+                            <sourceRoot1>${project.basedir}/src/main/java</sourceRoot1>
+                            <sourceRoot2>${project.basedir}/src/main/kotlin</sourceRoot2>
+                        </sourceRoots>
+                        <testSourceRoots>
+                            <testSourceRoot1>${project.basedir}/src/test/java</testSourceRoot1>
+                            <testSourceRoot2>${project.basedir}/src/test/kotlin</testSourceRoot2>
+                        </testSourceRoots>
+                        <verbose>true</verbose>
+                        <skip>${ktlint.skip}</skip>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.jetbrains.dokka</groupId>
+                    <artifactId>dokka-maven-plugin</artifactId>
+                    <version>${dependency.dokka.version}</version>
+                </plugin>
+                <!-- Explicitly bind kotlin-maven-plugin compile/test-compile goals to
+                     process-sources/process-test-sources phases so that it runs before maven-compile-plugin -->
+                <plugin>
+                    <groupId>org.jetbrains.kotlin</groupId>
+                    <artifactId>kotlin-maven-plugin</artifactId>
+                    <version>${kotlin.version}</version>
+                    <executions>
+                        <execution>
+                            <id>compile</id>
+                            <phase>process-sources</phase>
+                            <goals>
+                                <goal>compile</goal>
+                            </goals>
+                            <configuration>
+                                <sourceDirs>
+                                    <sourceDir>${project.basedir}/src/main/kotlin</sourceDir>
+                                    <sourceDir>${project.basedir}/src/main/java</sourceDir>
+                                </sourceDirs>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>test-compile</id>
+                            <phase>process-test-sources</phase>
+                            <goals>
+                                <goal>test-compile</goal>
+                            </goals>
+                            <configuration>
+                                <sourceDirs>
+                                    <sourceDir>${project.basedir}/src/test/kotlin</sourceDir>
+                                    <sourceDir>${project.basedir}/src/test/java</sourceDir>
+                                </sourceDirs>
+                            </configuration>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <jvmTarget>${kotlin.compiler.jvmTarget}</jvmTarget>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>com.github.gantsign.maven</groupId>
+                <artifactId>ktlint-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.jetbrains.kotlin</groupId>
+                <artifactId>kotlin-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
