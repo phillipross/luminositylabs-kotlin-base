@@ -36,11 +36,25 @@
                     <artifactId>directory-maven-plugin</artifactId>
                     <executions>
                         <execution>
-                            <id>directory-of-property</id>
+                            <id>multi-module-root-directory-build</id>
                             <goals>
                                 <goal>directory-of</goal>
                             </goals>
                             <phase>validate</phase>
+                            <configuration>
+                                <property>multi.module.root</property>
+                                <project>
+                                    <groupId>co.luminositylabs.oss.luminositylabs-kotlin-base.testing</groupId>
+                                    <artifactId>testing</artifactId>
+                                </project>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>multi-module-root-directory-site</id>
+                            <goals>
+                                <goal>directory-of</goal>
+                            </goals>
+                            <phase>pre-site</phase>
                             <configuration>
                                 <property>multi.module.root</property>
                                 <project>
