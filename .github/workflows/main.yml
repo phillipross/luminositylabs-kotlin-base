@@ -108,3 +108,15 @@ jobs:
         install
         site
         site:stage
+
+    - name: Examples Module
+      run: >
+        mvn -B -U -V -f examples -ntp -s ${{ env.SETTINGS }} -P${{ env.PROFILES }} ${{ env.MAVEN_PROPS }}
+        dependency:list-repositories
+        dependency:tree
+        help:active-profiles
+        help:effective-pom
+        clean
+        install
+        site
+        site:stage
