@@ -18,6 +18,7 @@
 
     <modules>
         <module>gson-1</module>
+        <module>http4k-1</module>
         <module>moshi-1</module>
     </modules>
 
