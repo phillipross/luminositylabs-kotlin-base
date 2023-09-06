@@ -13,11 +13,6 @@
     <name>http4k-test-1</name>
     <description>Example code demonstrating http4k usage</description>
 
-    <properties>
-        <!-- dependency versioning -->
-        <dependency.http4k.version>5.7.5.0</dependency.http4k.version>
-    </properties>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
