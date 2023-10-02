@@ -4,7 +4,6 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 
 class KHelloWorldIT {
-
     @Test
     fun someTest() {
         val testName = "Boba[${javaClass.simpleName}]"

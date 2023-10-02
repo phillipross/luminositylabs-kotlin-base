@@ -9,14 +9,14 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 
 class ClientIT {
-
     @Test
     fun `test http client requests`() {
-        val client: HttpHandler = JavaHttpClient(
-            HttpClient.newBuilder()
-                .followRedirects(HttpClient.Redirect.NORMAL)
-                .build(),
-        )
+        val client: HttpHandler =
+            JavaHttpClient(
+                HttpClient.newBuilder()
+                    .followRedirects(HttpClient.Redirect.NORMAL)
+                    .build(),
+            )
         setOf(
             "https://www.http4k.org/",
             "https://www.http4k.org/documentation/",
