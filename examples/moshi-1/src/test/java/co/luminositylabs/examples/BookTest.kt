@@ -18,14 +18,14 @@ class BookTest {
                 .add(UUIDAdapter)
                 .addLast(KotlinJsonAdapterFactory())
                 .build()
-        val bookAdapter = moshi.adapter<Book>()
+        val bookAdapter = moshi.adapter<ExampleBook>()
         val books =
             mutableListOf(
-                Book(UUID.randomUUID(), "Book 1", "Alan Alanson"),
-                Book(UUID.randomUUID(), "Book 2", "Ben Benson"),
-                Book(UUID.randomUUID(), "Book 3", "Carl Carlson"),
-                Book(UUID.randomUUID(), "Book 4", "David Davidson"),
-                Book(UUID.randomUUID(), "Book 5", "Edward Edwardson"),
+                ExampleBook(UUID.randomUUID(), "Book 1", "Alan Alanson"),
+                ExampleBook(UUID.randomUUID(), "Book 2", "Ben Benson"),
+                ExampleBook(UUID.randomUUID(), "Book 3", "Carl Carlson"),
+                ExampleBook(UUID.randomUUID(), "Book 4", "David Davidson"),
+                ExampleBook(UUID.randomUUID(), "Book 5", "Edward Edwardson"),
             )
         val jsonBooks =
             books.asSequence()
