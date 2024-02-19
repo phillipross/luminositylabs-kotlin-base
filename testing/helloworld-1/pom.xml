@@ -7,11 +7,10 @@
     <parent>
         <groupId>co.luminositylabs.oss.luminositylabs-kotlin-base.testing</groupId>
         <artifactId>testing</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>0.0.2-SNAPSHOT</version>
     </parent>
 
     <artifactId>helloworld-1</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>helloworld-1</name>
