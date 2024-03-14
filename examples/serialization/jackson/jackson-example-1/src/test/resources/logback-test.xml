@@ -10,6 +10,6 @@
         <appender-ref ref="STDOUT" />
     </root>
 
-    <logger name="co.luminositylabs.oss.examples.gson" level="TRACE"/>
+    <logger name="co.luminositylabs.oss.examples.jackson" level="TRACE"/>
 
 </configuration>
