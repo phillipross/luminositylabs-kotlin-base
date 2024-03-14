@@ -18,8 +18,7 @@
     <modules>
         <module>coroutines</module>
         <module>http</module>
-        <module>gson-1</module>
-        <module>moshi-1</module>
+        <module>serialization</module>
     </modules>
 
     <build>
