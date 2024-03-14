@@ -72,10 +72,16 @@
         <dependency.moshi.version>1.15.1</dependency.moshi.version>
         <dependency.ktlint.version>0.48.0</dependency.ktlint.version>
         <dependency.kotlinx-coroutines.version>1.8.0</dependency.kotlinx-coroutines.version>
+        <dependency.kotlin-logging-jvm.version>6.0.3</dependency.kotlin-logging-jvm.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>io.github.oshai</groupId>
+                <artifactId>kotlin-logging-jvm</artifactId>
+                <version>${dependency.kotlin-logging-jvm.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.jetbrains.kotlin</groupId>
                 <artifactId>kotlin-stdlib</artifactId>
@@ -95,6 +101,10 @@
     </dependencyManagement>
 
     <dependencies>
+        <dependency>
+            <groupId>io.github.oshai</groupId>
+            <artifactId>kotlin-logging-jvm</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-stdlib</artifactId>
