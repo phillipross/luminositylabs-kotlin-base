@@ -1,11 +1,15 @@
-package co.luminositylabs.testing
+package co.luminositylabs.oss.testing
+
+import io.github.oshai.kotlinlogging.KotlinLogging
+
+private val logger = KotlinLogging.logger {}
 
 class KotlinHelloWorld {
     val greetingPrefix = "Hello "
 
     fun sayHello(name: String): String {
         val greeting = "$greetingPrefix$name"
-        println(greeting)
+        logger.debug { greeting }
         return greeting
     }
 }

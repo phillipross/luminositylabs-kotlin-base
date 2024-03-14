@@ -1,4 +1,4 @@
-package co.luminositylabs.testing
+package co.luminositylabs.oss.testing
 
 fun main(args: Array<String>) {
     println("Hello World!")
