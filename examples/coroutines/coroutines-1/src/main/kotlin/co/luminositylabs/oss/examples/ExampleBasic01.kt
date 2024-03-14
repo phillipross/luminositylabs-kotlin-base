@@ -1,9 +1,12 @@
-package co.luminositylabs.examples
+package co.luminositylabs.oss.examples
 
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings
+import io.github.oshai.kotlinlogging.KotlinLogging
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
+
+val logger = KotlinLogging.logger {}
 
 fun main() = ExampleBasicNonBlocking().nonBlockingHelloWorld()
 
@@ -13,9 +16,9 @@ class ExampleBasicNonBlocking {
         runBlocking { // this: CoroutinesScope
             launch { // launch a new coroutine and continue
                 delay(1000L) // non-blocking delay for 1 second (default unit is ms)
-                println("World!") // printer after delay
+                logger.debug { "World!" } // printer after delay
             }
-            println("Hello") // main coroutine continues while a previous one is delayed
+            logger.debug { "Hello" } // main coroutine continues while a previous one is delayed
         }
     }
 }
