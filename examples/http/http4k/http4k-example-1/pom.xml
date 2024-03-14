@@ -3,14 +3,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>co.luminositylabs.oss.luminositylabs-kotlin-base.examples</groupId>
-        <artifactId>examples</artifactId>
+        <groupId>co.luminositylabs.oss.luminositylabs-kotlin-base.examples.http.http4k</groupId>
+        <artifactId>http4k</artifactId>
         <version>0.0.2-SNAPSHOT</version>
     </parent>
 
-    <artifactId>http4k-1</artifactId>
+    <artifactId>http4k-example-1</artifactId>
 
-    <name>http4k-test-1</name>
+    <name>http4k-example-1</name>
     <description>Example code demonstrating http4k usage</description>
 
     <dependencyManagement>

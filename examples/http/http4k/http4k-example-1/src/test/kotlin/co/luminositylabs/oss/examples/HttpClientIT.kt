@@ -1,5 +1,6 @@
-package co.luminositylabs.testing
+package co.luminositylabs.oss.examples
 
+import io.github.oshai.kotlinlogging.KotlinLogging
 import org.http4k.client.JavaHttpClient
 import org.http4k.core.HttpHandler
 import org.http4k.core.Method
@@ -8,9 +9,12 @@ import java.net.http.HttpClient
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
-class ClientIT {
+val logger = KotlinLogging.logger {}
+
+class HttpClientIT {
     @Test
-    fun `test http client requests`() {
+    fun `Test HTTP Client Requests`() {
+        logger.trace { "Testing http client requests" }
         val client: HttpHandler =
             JavaHttpClient(
                 HttpClient.newBuilder()
