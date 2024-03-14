@@ -16,8 +16,9 @@
     <description>Example code demonstrating serialization framework usage</description>
 
     <modules>
-        <module>common</module>
+        <module>serialization-common</module>
         <module>gson</module>
+        <module>jackson</module>
         <module>moshi</module>
     </modules>
 </project>

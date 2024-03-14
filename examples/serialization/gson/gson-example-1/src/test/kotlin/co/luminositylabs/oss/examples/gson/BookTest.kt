@@ -1,4 +1,4 @@
-package co.luminositylabs.oss.examples.moshi
+package co.luminositylabs.oss.examples.gson
 
 import co.luminositylabs.oss.examples.ExampleBook
 import com.google.gson.GsonBuilder
