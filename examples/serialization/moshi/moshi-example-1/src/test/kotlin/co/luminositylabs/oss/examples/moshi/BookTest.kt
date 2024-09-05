@@ -19,7 +19,8 @@ class BookTest {
     fun `Test data class to json serialization`() {
         logger.trace { "testing data class to json serialization" }
         val moshi =
-            Moshi.Builder()
+            Moshi
+                .Builder()
                 .add(UUIDAdapter)
                 .addLast(KotlinJsonAdapterFactory())
                 .build()
@@ -33,12 +34,14 @@ class BookTest {
                 ExampleBook(UUID.randomUUID(), "Book 5", "Edward Edwardson"),
             )
         val jsonBooks =
-            books.asSequence()
+            books
+                .asSequence()
                 .map { bookAdapter.toJson(it) }
                 .onEach { logger.debug { it } }
                 .toList()
         val objectBooks =
-            jsonBooks.asSequence()
+            jsonBooks
+                .asSequence()
                 .map { bookAdapter.fromJson(it) }
                 .onEach { logger.debug { it } }
                 .toList()

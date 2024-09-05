@@ -17,7 +17,8 @@ class HttpClientIT {
         logger.trace { "Testing http client requests" }
         val client: HttpHandler =
             JavaHttpClient(
-                HttpClient.newBuilder()
+                HttpClient
+                    .newBuilder()
                     .followRedirects(HttpClient.Redirect.NORMAL)
                     .build(),
             )
