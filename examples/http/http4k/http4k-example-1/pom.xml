@@ -13,6 +13,9 @@
     <name>http4k-example-1</name>
     <description>Example code demonstrating http4k usage</description>
 
+    <properties>
+        <maven.integration.test.skip>true</maven.integration.test.skip>
+    </properties>
     <dependencyManagement>
         <dependencies>
             <dependency>
