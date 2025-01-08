@@ -17,15 +17,17 @@ class HttpClientIT {
         logger.trace { "Testing http client requests" }
         val client: HttpHandler =
             JavaHttpClient(
-                HttpClient.newBuilder()
+                HttpClient
+                    .newBuilder()
                     .followRedirects(HttpClient.Redirect.NORMAL)
                     .build(),
             )
         setOf(
             "https://www.http4k.org/",
-            "https://www.http4k.org/documentation/",
-            "https://www.http4k.org/changelog/",
-            "https://www.http4k.org/support/",
+            "https://www.http4k.org/learn/",
+            "https://www.http4k.org/quickstart/",
+            "https://www.http4k.org/tutorial/",
+            "https://www.http4k.org/howto/",
             "https://www.http4k.org/faq/",
             "https://github.com/http4k/http4k",
         ).associateWith { Request(Method.GET, it) }
