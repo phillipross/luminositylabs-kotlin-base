@@ -23,12 +23,14 @@ class BookTest {
                 ExampleBook(UUID.randomUUID(), "Book 5", "Edward Edwardson"),
             )
         val jsonBooks =
-            books.asSequence()
+            books
+                .asSequence()
                 .map { objectMapper.writeValueAsString(it) }
                 .onEach { logger.debug { it } }
                 .toList()
         val objectBooks =
-            jsonBooks.asSequence()
+            jsonBooks
+                .asSequence()
                 .map { objectMapper.readValue(it, ExampleBook::class.java) }
                 .onEach { logger.debug { it } }
                 .toList()
