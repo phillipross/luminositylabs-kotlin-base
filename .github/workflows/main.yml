@@ -106,8 +106,8 @@ jobs:
         help:effective-pom
         clean
         install
-#        site
-#        site:stage
+        site
+        site:stage
 
     - name: Examples Module
       run: >
@@ -118,5 +118,5 @@ jobs:
         help:effective-pom
         clean
         install
-#        site
-#        site:stage
+        site
+        site:stage
