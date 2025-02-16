@@ -5,5 +5,10 @@
         <ignoreVersion type="regex">.*[\.-](?i)([M|alpha|beta|rc]).*</ignoreVersion>
     </ignoreVersions>
     <rules>
+        <rule groupId="org.http4k" comparisonMethod="maven">
+            <ignoreVersions>
+                <ignoreVersion type="regex">6\..*</ignoreVersion>
+            </ignoreVersions>
+        </rule>
     </rules>
 </ruleset>
