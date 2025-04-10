@@ -72,8 +72,8 @@
         <dependency.jackson.version>2.18.3</dependency.jackson.version>
         <dependency.moshi.version>1.15.2</dependency.moshi.version>
         <dependency.ktlint.version>0.48.0</dependency.ktlint.version>
-        <dependency.kotlin-logging-jvm.version>7.0.5</dependency.kotlin-logging-jvm.version>
-        <dependency.kotlinx-coroutines.version>1.10.1</dependency.kotlinx-coroutines.version>
+        <dependency.kotlin-logging-jvm.version>7.0.6</dependency.kotlin-logging-jvm.version>
+        <dependency.kotlinx-coroutines.version>1.10.2</dependency.kotlinx-coroutines.version>
     </properties>
 
     <dependencyManagement>
