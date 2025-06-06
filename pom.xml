@@ -51,7 +51,7 @@
 
     <scm>
         <url>https://github.com/luminositylabs/luminositylabs-kotlin-base</url>
-        <connection>scm:git:https://github.com/luminositylabs/luminositylabs-kotlin-base.git</connection>
+        <connection>scm:git:git@github.com:luminositylabs/luminositylabs-kotlin-base.git</connection>
         <tag>HEAD</tag>
     </scm>
 
