@@ -33,5 +33,14 @@
                 <ignoreVersion type="regex">1\.10\..*</ignoreVersion>
             </ignoreVersions>
         </rule>
+
+        <!-- Pin http4k version to pre-V6.3 (v6.3+ requires kotlin 2.x) -->
+        <rule groupId="org.http4k" comparisonMethod="maven">
+            <ignoreVersions>
+                <!--<ignoreVersion type="regex">^6\.2.*\..*$</ignoreVersion>-->
+                <ignoreVersion type="regex">^6\.([3-9]|[1-9][0-9]+)\..*$</ignoreVersion>
+                <ignoreVersion type="regex">^[7-9].*$</ignoreVersion>
+            </ignoreVersions>
+        </rule>
     </rules>
 </ruleset>
