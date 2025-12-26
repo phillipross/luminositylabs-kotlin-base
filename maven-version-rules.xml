@@ -5,5 +5,11 @@
         <ignoreVersion type="regex">.*[\.-](?i)([M|alpha|beta|rc]).*</ignoreVersion>
     </ignoreVersions>
     <rules>
+        <!-- Pin kotlin to pre-v2.2.x -->
+        <rule groupId="org.jetbrains.kotlin" comparisonMethod="maven">
+            <ignoreVersions>
+                <ignoreVersion type="regex">^(2\.[2-9]\..*|[3-9].*)$</ignoreVersion>
+            </ignoreVersions>
+        </rule>
     </rules>
 </ruleset>
