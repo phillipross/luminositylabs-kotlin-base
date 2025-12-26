@@ -5,5 +5,24 @@
         <ignoreVersion type="regex">.*[\.-](?i)([M|alpha|beta|rc]).*</ignoreVersion>
     </ignoreVersions>
     <rules>
+        <!-- Pin kotlin to pre-V2.3.x -->
+        <rule groupId="org.jetbrains.kotlin" artifactId="kotlin-maven-plugin" comparisonMethod="maven">
+            <ignoreVersions>
+                <ignoreVersion type="regex">2\.[3-9].*\..*</ignoreVersion>
+                <ignoreVersion type="regex">[3-9].*\..*</ignoreVersion>
+            </ignoreVersions>
+        </rule>
+        <rule groupId="org.jetbrains.kotlin" artifactId="kotlin-stdlib" comparisonMethod="maven">
+            <ignoreVersions>
+                <ignoreVersion type="regex">2\.[3-9].*\..*</ignoreVersion>
+                <ignoreVersion type="regex">[3-9].*\..*</ignoreVersion>
+            </ignoreVersions>
+        </rule>
+        <rule groupId="org.jetbrains.kotlin" artifactId="kotlin-test-testng" comparisonMethod="maven">
+            <ignoreVersions>
+                <ignoreVersion type="regex">2\.[3-9].*\..*</ignoreVersion>
+                <ignoreVersion type="regex">[3-9].*\..*</ignoreVersion>
+            </ignoreVersions>
+        </rule>
     </rules>
 </ruleset>
