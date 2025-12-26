@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
- Copyright (c) 2024 Luminosity Labs LLC. All rights reserved.
+ Copyright (c) 2025 Luminosity Labs LLC. All rights reserved.
 
  Licensed to the Apache Software Foundation (ASF) under one or more
  contributor license agreements.  See the NOTICE file distributed with this
@@ -21,7 +21,7 @@
     <parent>
         <groupId>co.luminositylabs.oss</groupId>
         <artifactId>luminositylabs-oss-parent</artifactId>
-        <version>0.4.1-SNAPSHOT</version>
+        <version>0.4.2-SNAPSHOT</version>
     </parent>
 
     <artifactId>luminositylabs-kotlin-base</artifactId>
@@ -51,7 +51,7 @@
 
     <scm>
         <url>https://github.com/luminositylabs/luminositylabs-kotlin-base</url>
-        <connection>scm:git:https://github.com/luminositylabs/luminositylabs-kotlin-base.git</connection>
+        <connection>scm:git:git@github.com:luminositylabs/luminositylabs-kotlin-base.git</connection>
         <tag>HEAD</tag>
     </scm>
 
@@ -64,15 +64,15 @@
         <!-- testing/linting settings -->
         <ktlint.skip>false</ktlint.skip>
         <!-- plugin versioning -->
-        <ktlint-maven-plugin.version>3.4.0</ktlint-maven-plugin.version>
+        <ktlint-maven-plugin.version>3.5.0</ktlint-maven-plugin.version>
         <!-- dependency versioning -->
-        <dependency.dokka.version>2.0.0</dependency.dokka.version>
-        <dependency.gson.version>2.11.0</dependency.gson.version>
-        <dependency.http4k.version>5.45.0.0</dependency.http4k.version>
-        <dependency.jackson.version>2.18.2</dependency.jackson.version>
+        <dependency.dokka.version>2.1.0</dependency.dokka.version>
+        <dependency.gson.version>2.13.2</dependency.gson.version>
+        <dependency.http4k.version>5.47.0.0</dependency.http4k.version>
+        <dependency.jackson.version>2.20.1</dependency.jackson.version>
         <dependency.moshi.version>1.15.2</dependency.moshi.version>
         <dependency.ktlint.version>0.48.0</dependency.ktlint.version>
-        <dependency.kotlin-logging-jvm.version>7.0.3</dependency.kotlin-logging-jvm.version>
+        <dependency.kotlin-logging-jvm.version>7.0.13</dependency.kotlin-logging-jvm.version>
         <dependency.kotlinx-coroutines.version>1.9.0</dependency.kotlinx-coroutines.version>
     </properties>
 

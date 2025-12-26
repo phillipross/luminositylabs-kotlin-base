@@ -11,4 +11,19 @@
     <artifactId>coroutines-1</artifactId>
 
     <name>coroutines-1</name>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.github.spotbugs</groupId>
+                    <artifactId>spotbugs-maven-plugin</artifactId>
+                    <configuration>
+                        <!--suppress UnresolvedMavenProperty -->
+                        <excludeFilterFile>file:///${project.basedir}/spotbugs-exclude.xml</excludeFilterFile>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>
