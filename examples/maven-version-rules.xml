@@ -6,15 +6,35 @@
     </ignoreVersions>
     <rules>
         <!-- Pin kotlin to pre-v2.2.x -->
-        <rule groupId="org.jetbrains.kotlin" comparisonMethod="maven">
+        <rule groupId="org.jetbrains.kotlin" artifactId="kotlin-maven-plugin" comparisonMethod="maven">
             <ignoreVersions>
-                <ignoreVersion type="regex">^(2\.[2-9]\..*|[3-9].*)$</ignoreVersion>
+                <ignoreVersion type="regex">^2\.(?:[3-9]|[1-9]\d+)\..*$</ignoreVersion>
+                <ignoreVersion type="regex">^(?:[3-9]|[1-9]\d+)$</ignoreVersion>
             </ignoreVersions>
         </rule>
+        <rule groupId="org.jetbrains.kotlin" artifactId="kotlin-reflect" comparisonMethod="maven">
+            <ignoreVersions>
+                <ignoreVersion type="regex">^2\.(?:[3-9]|[1-9]\d+)\..*$</ignoreVersion>
+                <ignoreVersion type="regex">^(?:[3-9]|[1-9]\d+)$</ignoreVersion>
+            </ignoreVersions>
+        </rule>
+        <rule groupId="org.jetbrains.kotlin" artifactId="kotlin-stdlib" comparisonMethod="maven">
+            <ignoreVersions>
+                <ignoreVersion type="regex">^2\.(?:[3-9]|[1-9]\d+)\..*$</ignoreVersion>
+                <ignoreVersion type="regex">^(?:[3-9]|[1-9]\d+)$</ignoreVersion>
+            </ignoreVersions>
+        </rule>
+        <rule groupId="org.jetbrains.kotlin" artifactId="kotlin-test-testng" comparisonMethod="maven">
+            <ignoreVersions>
+                <ignoreVersion type="regex">^2\.(?:[3-9]|[1-9]\d+)\..*$</ignoreVersion>
+                <ignoreVersion type="regex">^(?:[3-9]|[1-9]\d+)$</ignoreVersion>
+            </ignoreVersions>
+        </rule>
+
         <!-- Pin http4k version to pre-V6 (v6+ requires java 21) -->
         <rule groupId="org.http4k" comparisonMethod="maven">
             <ignoreVersions>
-                <ignoreVersion type="regex">^(?:[6-9]|\d{2,})\..*$</ignoreVersion>
+                <ignoreVersion type="regex">^(?:[6-9]|[1-9]\d+)\..*$</ignoreVersion>
             </ignoreVersions>
         </rule>
     </rules>
