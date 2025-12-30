@@ -8,29 +8,30 @@
         <!-- Pin kotlin to pre-V2 -->
         <rule groupId="org.jetbrains.kotlin" artifactId="kotlin-maven-plugin" comparisonMethod="maven">
             <ignoreVersions>
-                <ignoreVersion type="regex">2\..*</ignoreVersion>
+                <ignoreVersion type="regex">^(?:[2-9]|[1-9]\d+)\..*$</ignoreVersion> <!-- Ignore v2.x.x + -->
             </ignoreVersions>
         </rule>
         <rule groupId="org.jetbrains.kotlin" artifactId="kotlin-reflect" comparisonMethod="maven">
             <ignoreVersions>
-                <ignoreVersion type="regex">2\..*</ignoreVersion>
+                <ignoreVersion type="regex">^(?:[2-9]|[1-9]\d+)\..*$</ignoreVersion> <!-- Ignore v2.x.x + -->
             </ignoreVersions>
         </rule>
         <rule groupId="org.jetbrains.kotlin" artifactId="kotlin-stdlib" comparisonMethod="maven">
             <ignoreVersions>
-                <ignoreVersion type="regex">2\..*</ignoreVersion>
+                <ignoreVersion type="regex">^(?:[2-9]|[1-9]\d+)\..*$</ignoreVersion> <!-- Ignore v2.x.x + -->
             </ignoreVersions>
         </rule>
         <rule groupId="org.jetbrains.kotlin" artifactId="kotlin-test-testng" comparisonMethod="maven">
             <ignoreVersions>
-                <ignoreVersion type="regex">2\..*</ignoreVersion>
+                <ignoreVersion type="regex">^(?:[2-9]|[1-9]\d+)\..*$</ignoreVersion> <!-- Ignore v2.x.x + -->
             </ignoreVersions>
         </rule>
 
         <!-- Pin kotlinx-coroutines to 1.9.x (1.10.x requires kotlin 2.x) -->
         <rule groupId="org.jetbrains.kotlinx" artifactId="kotlinx-coroutines-core" comparisonMethod="maven">
             <ignoreVersions>
-                <ignoreVersion type="regex">1\.10\..*</ignoreVersion>
+                <ignoreVersion type="regex">^1\.[1-9]\d+\..*</ignoreVersion> <!-- Ignore v1.10.x + -->
+                <ignoreVersion type="regex">^(?:[2-9]|[1-9]\d+)\..*$</ignoreVersion> <!-- Ignore v2.x.x + -->
             </ignoreVersions>
         </rule>
     </rules>
