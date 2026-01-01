@@ -8,20 +8,26 @@
         <!-- Pin kotlin to pre-V2.3.x -->
         <rule groupId="org.jetbrains.kotlin" artifactId="kotlin-maven-plugin" comparisonMethod="maven">
             <ignoreVersions>
-                <ignoreVersion type="regex">2\.[3-9].*\..*</ignoreVersion>
-                <ignoreVersion type="regex">[3-9].*\..*</ignoreVersion>
+                <ignoreVersion type="regex">^2\.(?:[3-9]|[1-9]\d+)\..*$</ignoreVersion> <!-- Ignore v2.3.x + -->
+                <ignoreVersion type="regex">^(?:[3-9]|[1-9]\d+)$</ignoreVersion> <!-- Ignore v3.x + -->
+            </ignoreVersions>
+        </rule>
+        <rule groupId="org.jetbrains.kotlin" artifactId="kotlin-reflect" comparisonMethod="maven">
+            <ignoreVersions>
+                <ignoreVersion type="regex">^2\.(?:[3-9]|[1-9]\d+)\..*$</ignoreVersion> <!-- Ignore v2.3.x + -->
+                <ignoreVersion type="regex">^(?:[3-9]|[1-9]\d+)$</ignoreVersion> <!-- Ignore v3.x + -->
             </ignoreVersions>
         </rule>
         <rule groupId="org.jetbrains.kotlin" artifactId="kotlin-stdlib" comparisonMethod="maven">
             <ignoreVersions>
-                <ignoreVersion type="regex">2\.[3-9].*\..*</ignoreVersion>
-                <ignoreVersion type="regex">[3-9].*\..*</ignoreVersion>
+                <ignoreVersion type="regex">^2\.(?:[3-9]|[1-9]\d+)\..*$</ignoreVersion> <!-- Ignore v2.3.x + -->
+                <ignoreVersion type="regex">^(?:[3-9]|[1-9]\d+)$</ignoreVersion> <!-- Ignore v3.x + -->
             </ignoreVersions>
         </rule>
         <rule groupId="org.jetbrains.kotlin" artifactId="kotlin-test-testng" comparisonMethod="maven">
             <ignoreVersions>
-                <ignoreVersion type="regex">2\.[3-9].*\..*</ignoreVersion>
-                <ignoreVersion type="regex">[3-9].*\..*</ignoreVersion>
+                <ignoreVersion type="regex">^2\.(?:[3-9]|[1-9]\d+)\..*$</ignoreVersion> <!-- Ignore v2.3.x + -->
+                <ignoreVersion type="regex">^(?:[3-9]|[1-9]\d+)$</ignoreVersion> <!-- Ignore v3.x + -->
             </ignoreVersions>
         </rule>
     </rules>
