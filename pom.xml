@@ -68,11 +68,11 @@
         <!-- dependency versioning -->
         <dependency.dokka.version>2.1.0</dependency.dokka.version>
         <dependency.gson.version>2.13.2</dependency.gson.version>
-        <dependency.http4k.version>6.25.0.0</dependency.http4k.version>
+        <dependency.http4k.version>6.25.1.0</dependency.http4k.version>
         <dependency.jackson.version>2.20.1</dependency.jackson.version>
         <dependency.moshi.version>1.15.2</dependency.moshi.version>
         <dependency.ktlint.version>0.48.0</dependency.ktlint.version>
-        <dependency.kotlin-logging-jvm.version>7.0.13</dependency.kotlin-logging-jvm.version>
+        <dependency.kotlin-logging-jvm.version>7.0.14</dependency.kotlin-logging-jvm.version>
         <dependency.kotlinx-coroutines.version>1.10.2</dependency.kotlinx-coroutines.version>
     </properties>
 
