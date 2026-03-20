@@ -1,7 +1,7 @@
-package co.luminositylabs.oss.examples.jackson
+package co.luminositylabs.oss.examples.jackson3
 
 import co.luminositylabs.oss.examples.ExampleBook
-import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
+import tools.jackson.module.kotlin.jacksonObjectMapper
 import java.util.UUID
 import kotlin.test.Test
 import kotlin.test.assertEquals
