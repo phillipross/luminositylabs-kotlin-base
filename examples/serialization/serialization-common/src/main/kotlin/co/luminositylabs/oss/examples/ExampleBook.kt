@@ -5,5 +5,6 @@ import java.util.UUID
 data class ExampleBook(
     val id: UUID,
     val title: String,
-    val author: String,
+    val authorName: String,
+    val fiction: Boolean? = null,
 )
