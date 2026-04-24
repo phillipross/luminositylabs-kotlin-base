@@ -67,7 +67,7 @@
         <ktlint-maven-plugin.version>3.7.1</ktlint-maven-plugin.version>
         <!-- dependency versioning -->
         <dependency.dokka.version>2.2.0</dependency.dokka.version>
-        <dependency.gson.version>2.13.2</dependency.gson.version>
+        <dependency.gson.version>2.14.0</dependency.gson.version>
         <dependency.http4k.version>5.47.0.0</dependency.http4k.version>
         <dependency.jackson.version>2.21.2</dependency.jackson.version>
         <dependency.jackson3.version>3.1.2</dependency.jackson3.version>
