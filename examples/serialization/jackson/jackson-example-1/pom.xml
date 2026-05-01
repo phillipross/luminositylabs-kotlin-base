@@ -43,6 +43,10 @@
             <artifactId>jackson-databind</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-toml</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.fasterxml.jackson.module</groupId>
             <artifactId>jackson-module-kotlin</artifactId>
         </dependency>
@@ -55,4 +59,18 @@
             <artifactId>jackson-module-kotlin</artifactId>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <configuration>
+                <suiteXmlFiles>
+                    <suiteXmlFile>${project.build.testOutputDirectory}/testng-it.xml</suiteXmlFile>
+                </suiteXmlFiles>
+            </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

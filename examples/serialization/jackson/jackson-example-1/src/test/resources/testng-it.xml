@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="jackson-example-1 Integration Test Suite" verbose="1">
+
+    <test name="Integration Tests">
+        <classes>
+            <!--<class name="co.luminositylabs.oss.examples.jackson.BookTest"/>-->
+            <!--<class name="co.luminositylabs.oss.examples.jackson.ObjectMapperConfigTest"/>-->
+            <class name="co.luminositylabs.oss.examples.jackson.TomlTest"/>
+            <!--<class name="co.luminositylabs.oss.examples.jackson3.BookTest"/>-->
+            <!--<class name="co.luminositylabs.oss.examples.jackson3.ObjectMapperConfigTest"/>-->
+        </classes>
+    </test>
+
+</suite>
