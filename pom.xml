@@ -71,6 +71,7 @@
         <dependency.http4k.version>6.49.0.0</dependency.http4k.version>
         <dependency.jackson.version>2.21.4</dependency.jackson.version>
         <dependency.jackson3.version>3.1.4</dependency.jackson3.version>
+        <dependency.jackson-annotation.version>2.22</dependency.jackson-annotation.version>
         <dependency.moshi.version>1.15.2</dependency.moshi.version>
         <dependency.ktlint.version>0.48.0</dependency.ktlint.version>
         <dependency.kotlin-logging-jvm.version>8.0.4</dependency.kotlin-logging-jvm.version>
