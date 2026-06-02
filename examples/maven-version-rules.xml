@@ -38,5 +38,13 @@
                 <ignoreVersion type="regex">^(?:[7-9]|[1-9]\d+)$</ignoreVersion> <!-- Ignore v7.x + -->
             </ignoreVersions>
         </rule>
+
+        <!-- Pin jackson to v2.21.x (2.22.x deployment temporarily broken) -->
+        <rule groupId="com.fasterxml.jackson" comparisonMethod="maven">
+            <ignoreVersions>
+                <ignoreVersion type="regex">^2\.(?:2[2-9]|[3-9]\d|[1-9]\d{2,})\..*</ignoreVersion> <!-- Ignore v2.22.x + -->
+                <ignoreVersion type="regex">^(?:[3-9]|[1-9]\d+)\..*$</ignoreVersion> <!-- Ignore v3.x.x + -->
+            </ignoreVersions>
+        </rule>
     </rules>
 </ruleset>
