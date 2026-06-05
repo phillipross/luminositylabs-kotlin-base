@@ -69,7 +69,7 @@
         <dependency.dokka.version>2.2.0</dependency.dokka.version>
         <dependency.gson.version>2.14.0</dependency.gson.version>
         <dependency.http4k.version>6.51.0.0</dependency.http4k.version>
-        <dependency.jackson.version>2.21.4</dependency.jackson.version>
+        <dependency.jackson.version>2.22.0</dependency.jackson.version>
         <dependency.jackson3.version>3.1.4</dependency.jackson3.version>
         <dependency.jackson-annotation.version>2.22</dependency.jackson-annotation.version>
         <dependency.moshi.version>1.15.2</dependency.moshi.version>
