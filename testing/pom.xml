@@ -5,7 +5,7 @@
     <parent>
         <groupId>co.luminositylabs.oss</groupId>
         <artifactId>luminositylabs-kotlin-base</artifactId>
-        <version>0.1.3.0-SNAPSHOT</version>
+        <version>0.1.4.0-SNAPSHOT</version>
     </parent>
 
     <groupId>co.luminositylabs.oss.luminositylabs-kotlin-base.testing</groupId>
