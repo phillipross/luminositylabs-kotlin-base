@@ -20,6 +20,30 @@
                 <artifactId>jackson-annotations</artifactId>
                 <version>${dependency.jackson-annotation.version}</version>
             </dependency>
+
+            <!-- Define explicit dependencies for jackson scala module as it currently has a separate version number
+                 than the BOM or other modules/extensions -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.module</groupId>
+                <artifactId>jackson-module-scala_2.11</artifactId>
+                <version>${dependency.jackson-module-scala.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.module</groupId>
+                <artifactId>jackson-module-scala_2.12</artifactId>
+                <version>${dependency.jackson-module-scala.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.module</groupId>
+                <artifactId>jackson-module-scala_2.13</artifactId>
+                <version>${dependency.jackson-module-scala.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.module</groupId>
+                <artifactId>jackson-module-scala_3</artifactId>
+                <version>${dependency.jackson-module-scala.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>com.fasterxml.jackson</groupId>
                 <artifactId>jackson-bom</artifactId>
